@@ -1,0 +1,86 @@
+.navigation{
+    position: relative;
+    display: block;
+    padding: 20px 0;
+    &.active{
+        background: linear-gradient(to bottom rgba(197, 186, 186,0.2), rgba(197, 186, 186,0.6) );
+    }
+    &__brand{
+        margin-left: 30px;
+    }
+    .hamburger{
+        display: inline-block;
+        position: absolute;
+        right: 5%;
+        &.active{
+            content: url(/images/icon-close.svg);
+            display: inline-block;
+            position: absolute;
+            right: 5%;
+        }
+    }
+    .active{
+        display: block;
+    }
+    @include small{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+        height: 10vh;
+        width: 100%;
+        cursor: pointer;
+        .hamburger{
+            display: none;
+        }
+    }
+    @include large{
+        padding: 30px 6.5%;
+    }
+    &__links-wrapper{
+        margin-top: 20px;
+        @include menu{
+            margin: auto;
+            width: 90%;
+            background-color: #fff;
+            margin-top: 20px;
+            box-shadow: 3px 3px 5px 6px #ccc;
+            display: none;
+        }
+        
+        @include small{
+            display: flex;
+        }
+        &--links{
+            padding: 20px 0;
+            color: $dark-blue;
+            font-weight: 700 ;
+            text-align: center;
+            &:hover{
+                border: none;
+                color: $bright-red;
+            }
+            @include small{
+                padding-top: 10px;
+                padding-right: 5px;
+                font-size: 18px;
+                &:hover{
+                transition: all 0.3s ease-in-out 0s;
+                color: $bright-red;
+                border-bottom: 1px solid $bright-red;
+                text-decoration: none;
+                }
+            }
+            @include medium{
+                padding: 20px;
+            }
+        }
+    }
+    &__button{
+        display: none;
+         @include small{
+            display: block;
+            @include button;
+        }
+    }
+}

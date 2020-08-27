@@ -1,0 +1,62 @@
+@mixin container {
+    margin: auto;
+    padding: 0 30px;
+    max-width: 90%;
+}
+
+@mixin button {
+    color: #fff;
+    background-color: $bright-red;
+    padding: 8px 20px;
+    border-radius: 50px;
+    box-shadow: 0px 7px $very-pale-red;
+    &:hover{
+        text-decoration: none;
+        color: #fff;
+        background-color: #eb8787;
+    }
+}
+
+@mixin header {
+    color: $dark-blue;
+}
+
+@mixin paragraph{
+    color: $dark-grayish-blue;
+}
+
+@mixin menu {
+    @media screen and (max-width:map-get($map: $breakpoints, $key: menu)) {
+        @content;
+    }
+}
+
+@mixin ipad {
+    @media screen and (min-width:map-get($map: $breakpoints, $key: ipad)) {
+        @content;
+    }
+}
+
+@mixin small {
+    @media screen and (min-width:map-get($map: $breakpoints, $key: small)) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media screen and (min-width:map-get($map: $breakpoints, $key: medium)) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media screen and (min-width:map-get($map: $breakpoints, $key: large)) {
+        @content;
+    }
+}
+
+@mixin xlarge{
+    @media screen and (min-width:map-get($map: $breakpoints, $key: xlarge)){
+        @content;
+    }
+}

@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam&display=swap');
+
+@import "./utils/variables";
+@import "./utils/mixins";
+
+@import "./base/typography";
+
+@import "./layouts/navigation";
+
+@import "./components/first-section";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background: url("/images/bg-tablet-pattern.svg");
+    background-repeat: no-repeat;
+    background-position: top -70px right -30px;
+    background-size: contain;
+    font-family: $font-stack;
+    font-weight: 400;
+    height: 100%;
+    width: 100%;
+}
