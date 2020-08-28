@@ -9,7 +9,7 @@
     background-color: $bright-red;
     padding: 8px 20px;
     border-radius: 50px;
-    box-shadow: 0px 7px $very-pale-red;
+    box-shadow: 0px 10px $very-pale-red;
     &:hover{
         text-decoration: none;
         color: #fff;
@@ -57,6 +57,12 @@
 
 @mixin xlarge{
     @media screen and (min-width:map-get($map: $breakpoints, $key: xlarge)){
+        @content;
+    }
+}
+
+@mixin ldesktop{
+    @media screen and (min-width:map-get($map: $breakpoints, $key: ldesktop)){
         @content;
     }
 }

@@ -8,6 +8,8 @@
 @import "./layouts/navigation";
 
 @import "./components/first-section";
+@import "./components/second-section";
+@import "./components/third-section";
 
 
 *{
@@ -27,4 +29,19 @@ body{
     font-weight: 400;
     height: 100%;
     width: 100%;
+    @include small{
+        background-size: 400px;
+    }
+    @include medium{
+        background-size: 500px;
+    }
+    @include large{
+        background-size: 550px;
+    }
+    @include xlarge{
+        background-size: 600px;
+    }
+    @media screen and (min-width:900px) and (max-width:1023px){
+        background-size: 470px;
+    }
 }
