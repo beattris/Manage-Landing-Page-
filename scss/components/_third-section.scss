@@ -1,0 +1,85 @@
+ .third{
+     
+     &__content{
+         .testimonial-header{
+            @include header;
+            font-weight: 700;
+            text-align: center;
+            padding-top: 50px;
+            @include ldesktop{
+                padding-top: 150px;
+            }
+         }
+         &--slider{
+             display: flex;
+             flex-direction: column;
+             text-align: center;
+            //  margin: 0 auto;
+             @include ipad{
+                 flex-direction: row;
+                 flex-wrap: wrap; 
+             }
+             .slide{
+                 height: auto;
+                 width: 300px;
+                 margin: 100px auto 20px;
+                 background-color: $very-light-gray;
+                 @media screen and (min-width:660px) and (max-width:767px){
+                     width: 500px;
+                 }
+                 @include ipad{
+                    width: 350px;
+                    // margin:  20px;
+                }
+                 @include small{
+                    width: 380px;
+                }
+                @include medium{
+                    width: 500px;
+                }
+                @include large{
+                    width: 400px;
+                }
+                @include xlarge{
+                    width: 450px;
+                }
+                @include ldesktop{
+                    width: 500px;
+                }
+                
+                 img{
+                    margin-top: -50px;
+                    width: 100px;
+                 }
+                 span{
+                     @include header;
+                     display: block;
+                     padding-top: 20px;
+                     font-weight: 700;
+                 }
+                 .testimony{
+                     @include paragraph;
+                     padding: 20px 30px;
+                 }
+             }
+             .slides-container{
+                 flex-direction: row;
+             }
+             .slides{
+                height: 15px;
+                width: 15px;
+                border-radius: 50%;
+                border: 2px solid $bright-red;
+                background-color: #fff;
+                display: inline-block;
+                margin-bottom: 50px;
+                &.active{
+                    background-color: $bright-red;
+                }
+                @include ipad{
+                    display: none;
+                }
+            }
+         }
+     }
+ }
