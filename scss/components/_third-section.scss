@@ -1,6 +1,10 @@
- .third{
-     
+ .third{  
+    text-align: center;
+    @media screen and (max-width:767px){
+         margin-bottom: 100px;
+      }
      &__content{
+         margin-bottom: 100px;
          .testimonial-header{
             @include header;
             font-weight: 700;
@@ -14,22 +18,37 @@
              display: flex;
              flex-direction: column;
              text-align: center;
-            //  margin: 0 auto;
              @include ipad{
                  flex-direction: row;
                  flex-wrap: wrap; 
              }
              .slide{
                  height: auto;
-                 width: 300px;
+                 width: 330px;
                  margin: 100px auto 20px;
                  background-color: $very-light-gray;
                  @media screen and (min-width:660px) and (max-width:767px){
-                     width: 500px;
+                   width: 500px;
                  }
+                 @media screen and (max-width:767px){
+                    display: none;
+                    &.active{
+                        display: block;
+                        animation: slide 2s ease;
+                    }
+                    @keyframes slide {
+                        0%{
+                            opacity: 0;
+                            transform: translateY(50px);
+                        }
+                        100%{
+                            opacity: 1;
+                            transform: translateY(0px);
+                        }
+                    }
+                  }
                  @include ipad{
                     width: 350px;
-                    // margin:  20px;
                 }
                  @include small{
                     width: 380px;
@@ -62,17 +81,14 @@
                      padding: 20px 30px;
                  }
              }
-             .slides-container{
-                 flex-direction: row;
-             }
              .slides{
                 height: 15px;
                 width: 15px;
                 border-radius: 50%;
-                border: 2px solid $bright-red;
+                border: 3px solid $bright-red;
                 background-color: #fff;
                 display: inline-block;
-                margin-bottom: 50px;
+                cursor: pointer;
                 &.active{
                     background-color: $bright-red;
                 }
@@ -80,6 +96,14 @@
                     display: none;
                 }
             }
+            @media screen and (max-width:659px){
+                .slide2, .slide3, .slide4{
+                    display: none;
+                }
+            }
          }
+     }
+     a{
+        @include button;  
      }
  }
