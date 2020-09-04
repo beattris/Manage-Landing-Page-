@@ -15,6 +15,7 @@ footer{
                 padding: 7px 15px;
                 border-radius: 20px;
                 border: none;
+                color: $bright-red;
                 @media screen and (min-width: 500px) and (max-width:767px){
                     padding: 15px 45px;
                     border-radius: 30px;
@@ -47,6 +48,9 @@ footer{
                 @include small{
                     padding: 15px 50px;
                     border-radius: 30px;
+                    &:hover{
+                        filter: brightness(50%);
+                    }
                 }
                 @include medium{
                     padding: 7px 20px;
@@ -85,7 +89,7 @@ footer{
                 font-weight: 500;
                 line-height: 2rem;
                 &:hover{
-                    color: #fff;
+                    color: $bright-red;
                 }
                 @include medium{
                     padding-right: 100px;
@@ -115,6 +119,7 @@ footer{
             svg{
                 cursor: pointer;
             }
+            
             @include medium{
                 padding-top: 0px;
                 margin: 0px;
@@ -136,7 +141,7 @@ footer{
             }
             .icons{
                 @include medium{
-                    width: 23px;
+                    width: 28px;
                     margin-right: 20px;
                 }
             }
