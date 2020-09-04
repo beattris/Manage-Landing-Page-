@@ -76,6 +76,7 @@
             @include header;
             font-weight: 700;
             margin-top: 10px;
+            padding: 20px;
             @include small{
                 padding-right: 20px;
             }

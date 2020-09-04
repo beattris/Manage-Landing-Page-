@@ -1,0 +1,144 @@
+footer{
+    background-color: $very-dark-blue;
+    text-align: center;
+    padding: 50px 0px 20px 0px;
+    @include medium{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+        .first-content{
+            text-align: center;
+            input{
+                padding: 7px 15px;
+                border-radius: 20px;
+                border: none;
+                @media screen and (min-width: 500px) and (max-width:767px){
+                    padding: 15px 45px;
+                    border-radius: 30px;
+                }
+                @include small{
+                    padding: 15px 55px;
+                    border-radius: 30px;
+                }
+                @include medium{
+                    padding: 7px 15px;
+                    border-radius: 20px;
+                }
+                @include xlarge{
+                    padding: 12px 25px;
+                    border-radius: 20px;
+                }
+            }
+            a{
+                text-decoration: none;
+                color: #fff;
+                background-color: $bright-red;
+                padding: 7px 20px;
+                border-radius: 20px;
+                font-weight: 700;
+                margin-left: .5rem;
+                @media screen and (min-width: 500px) and (max-width:767px){
+                    padding: 15px 50px;
+                    border-radius: 30px;
+                }
+                @include small{
+                    padding: 15px 50px;
+                    border-radius: 30px;
+                }
+                @include medium{
+                    padding: 7px 20px;
+                    border-radius: 20px;
+                }
+                @include xlarge{
+                    padding: 13px 35px;
+                    border-radius: 20px;
+                }
+            }
+            .copyright{
+                display: none;
+                @include medium{
+                    @include paragraph;
+                    display: block;
+                    padding-top: 70px;
+                }
+                @include xlarge{
+                    padding-top: 50px;
+                }
+            }
+        }
+        .second-content{
+            display: flex;
+            justify-content: space-around;
+            padding-top: 30px;
+            text-align: left;
+            @include medium{
+                padding-top: 0;
+            }
+            a{
+                @include paragraph;
+                text-decoration: none;
+                display: block;
+                text-transform: capitalize;
+                font-weight: 500;
+                line-height: 2rem;
+                &:hover{
+                    color: #fff;
+                }
+                @include medium{
+                    padding-right: 100px;
+                }
+            }
+            .links{
+                @include xlarge{
+                    padding-right: 150px;
+                }
+            }
+        }
+        .third-content{
+            .icons-container{
+                padding-top: 30px;
+                @include medium{
+                    display: none;
+                }
+            }
+            .icons{
+                width: 28px;
+                margin-right: 20px;
+            }
+        }
+        .fourth-content{
+            padding-top: 40px;
+            margin: 0 auto;
+            svg{
+                cursor: pointer;
+            }
+            @include medium{
+                padding-top: 0px;
+                margin: 0px;
+            }
+            .copyright2{
+                @include paragraph;
+                display: block;
+                padding-top: 50px;
+                @include medium{
+                    display: none;
+                }
+            }
+            .icons-container2{
+                display: none;
+                @include medium{
+                    display: block;
+                    padding-top: 70px;
+                }
+            }
+            .icons{
+                @include medium{
+                    width: 23px;
+                    margin-right: 20px;
+                }
+            }
+        }
+}
